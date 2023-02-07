@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+$first: hsl(193, 38%, 86%);
+$second: hsl(150, 100%, 66%);
+$third: hsl(217, 19%, 38%);
+$forth: hsl(217, 19%, 24%);
+$fifth: hsl(218, 23%, 16%);
+$primary: $first;
+$secondary: $second;
+$font-family: 'Marope', sans-serif;
+$font-family-base: $font-family;
+body {
+  background-color: $fifth !important;
+  color: $primary;
+  font-weight: 800;
+  font-size: 28px;
+}
+.card {
+  background-color: $forth !important;
+  max-width: 40rem;
+  height: 50vh;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 4rem;
+  text-align: center;
+  position: relative;
+}
+.card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: $secondary;
+}
+.card-quote {
+  font-size: 28px;
+  font-weight: 600;
+  color: white;
+}
+.card-btn {
+  transition: all 0.5s ease-in;
+}
+.card-btn:hover {
+  box-shadow: 0 1px 15px $primary !important;
+  transition: all 0.5s ease-in;
+}
+.card-btn:hover img {
+  transition: transform 0.5s ease;
+  transform: scale(1.1);
+}
+
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
