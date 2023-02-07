@@ -28,25 +28,23 @@ function App() {
   }, [])
   const { id, advice } = advices
   return (
-    <div className="main ">
-      <div className="vh-100 container mx-auto w-auto">
-        <div className="row justify-content-center align-items-center h-100  text-center">
-          <div className="col-md-8">
-            <div className="card position-relative">
-              <h5 className="card-title">ADVICE #{advices.id}</h5>
-              <h1 className="card-quote">"{advices.advice}"</h1>
-              <picture className="card-divide">
-                <source srcSet={desktopDivider} media="(min-width:768px)" />
-                <img src={mobileDivider} alt="" />
-              </picture>
-              <button className="bg-secondary  card-btn rounded-circle position-absolute top-100 start-50 translate-middle border-0 p-2">
-                {loading ? (
-                  '...'
-                ) : (
-                  <img src={btnImage} alt="" onClick={fetchAdvice} />
-                )}
-              </button>
-            </div>
+    <div className="main">
+      <div className="vh-100 container w-auto">
+        <div className="row justify-content-center align-items-center h-100  mx-auto text-center">
+          <div className="card position-relative col-md-6">
+            <h5 className="card-title">ADVICE #{advices.id}</h5>
+            <h1 className="card-quote">"{advices.advice}"</h1>
+            <picture className="card-divide">
+              <source srcSet={desktopDivider} media="(min-width:768px)" />
+              <img src={mobileDivider} alt="" />
+            </picture>
+            <button className="bg-secondary card-btn rounded-circle position-absolute top-100 start-50 translate-middle border-0 p-2">
+              {loading ? (
+                '...'
+              ) : (
+                <img src={btnImage} alt="" onClick={fetchAdvice} />
+              )}
+            </button>
           </div>
         </div>
       </div>
