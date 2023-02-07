@@ -8,7 +8,7 @@ const url = 'https://api.adviceslip.com/advice'
 function App() {
   const [loading, setLoading] = useState(true)
 
-  const [advices, setAdvices] = useState('')
+  const [advices, setAdvices] = useState([])
   const fetchAdvice = async () => {
     setLoading(true)
     try {
@@ -35,8 +35,8 @@ function App() {
             <h5 className="card-title">ADVICE #{advices.id}</h5>
             <h1 className="card-quote">"{advices.advice}"</h1>
             <picture className="card-divide">
-              <source srcSet={desktopDivider} media="(min-width:768px)" />
-              <img src={mobileDivider} alt="" />
+              <source srcSet={desktopDivider} media="(min-width:1024px)" />
+              <img src={mobileDivider} className="img-fluid" alt="" />
             </picture>
             <button className="bg-secondary card-btn rounded-circle position-absolute top-100 start-50 translate-middle border-0 p-2">
               {loading ? (
