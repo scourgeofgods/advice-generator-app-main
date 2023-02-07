@@ -31,14 +31,14 @@ function App() {
     <div className="main">
       <div className="vh-100 container w-auto">
         <div className="row justify-content-center align-items-center h-100  mx-auto text-center">
-          <div className="card position-relative col-md-6 p-5">
+          <div className="card position-relative col-md-6  gap-4 p-5">
             <h5 className="card-title">ADVICE #{advices.id}</h5>
             <h1 className="card-quote">"{advices.advice}"</h1>
             <picture className="card-divide">
               <source srcSet={desktopDivider} media="(min-width:1024px)" />
               <img src={mobileDivider} className="img-fluid" alt="" />
             </picture>
-            <button className="bg-secondary card-btn rounded-circle position-absolute top-100 start-50 translate-middle border-0 p-3">
+            <button className="bg-secondary card-btn rounded-circle position-absolute top-100 start-50 translate-middle border-0 p-4">
               {loading ? (
                 '...'
               ) : (
